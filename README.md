@@ -1,2 +1,2 @@
 # continuous_integration
-A pipeline that uses Jenkins.
+This repository is for testing a Jenkins pipeline.
