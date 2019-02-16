@@ -1,2 +1,2 @@
 # continuous_integration
-A pipeline that uses Jenkins
+A pipeline that uses Jenkins.
