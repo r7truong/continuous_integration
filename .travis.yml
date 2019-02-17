@@ -1,12 +1,8 @@
 language: python
 
 python:
-  - "2.7"
-  - "3.4"
-
-before_install:
-  - pip install pytest-cov
-  - cd python
+  - "3.5"
 
 script: 
-  - py.test -v --cov=maths
+  # triggers all test*.py scripts in tests
+  - python -m unittest discover tests
