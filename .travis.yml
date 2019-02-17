@@ -3,6 +3,17 @@ language: python
 python:
   - "3.5"
 
-script: 
-  # triggers all test*.py scripts in tests
-  - python -m unittest discover tests
+install:
+  - pip install pylint
+  - pip install flake8
+
+jobs:
+  include:
+    - stage: "Validation"
+      name: "Linting and Static Analysis"
+      script: python -m pylint *
+      script: flake8 * --exclude=README.md, requirements.txt
+    - stage: "Test"
+      # triggers all test*.py scripts in tests
+      name: "Unittests"
+      script: python -m unittest discover tests

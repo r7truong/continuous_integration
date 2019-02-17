@@ -1,5 +1,6 @@
 import math
 
+
 def circle_area(radius):
     if radius < 0:
         raise ValueError("The radius cannot be negative.")
