@@ -9,10 +9,10 @@ install:
 
 jobs:
   include:
-    - stage: "Validation"
+    - stage: "Validation" # TODO: Add Unfinished code checker and Commit Message Requirer
       name: "Linting and Static Analysis"
-      script: python -m pylint *
       script: flake8 * --exclude=README.md, requirements.txt
+      script: python -m pylint *
     - stage: "Test"
       # triggers all test*.py scripts in tests
       name: "Unittests"
