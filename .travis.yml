@@ -13,8 +13,8 @@ jobs:
     - stage: "Validation" # TODO: Add Unfinished code checker and Commit Message Requirer
       name: "Static Analysis"
       script: flake8 * --exclude=README.md, requirements.txt
-      script: bandit -r * --exclude=README.md
-      script: python -m pylint * --ignore=README.md, requirements.txt
+    - script: bandit -r * --exclude=README.md
+    - script: python -m pylint * --ignore=README.md, requirements.txt
     - stage: "Test"
       # triggers all test*.py scripts in tests
       name: "Unittests"
